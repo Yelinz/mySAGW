@@ -6475,45 +6475,7 @@ ember-auto-import@^1.11.2, ember-auto-import@^1.11.3, ember-auto-import@^1.2.19,
     walk-sync "^0.3.3"
     webpack "^4.43.0"
 
-ember-auto-import@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.2.0.tgz#6206be37e676fb490f03dd20afab973d5abe9da9"
-  integrity sha512-ngluzmtV31mTY+1ceOnWfGUIgGyZt850xFncMX/14Dfx0OhXaUKBpFjKjIor/Cen4WEF+OrdgNJAjH3sM07o6w==
-  dependencies:
-    "@babel/core" "^7.1.6"
-    "@babel/plugin-proposal-class-properties" "^7.13.0"
-    "@babel/plugin-proposal-decorators" "^7.13.5"
-    "@babel/preset-env" "^7.10.2"
-    "@babel/traverse" "^7.1.6"
-    "@embroider/shared-internals" "^0.40.0"
-    babel-loader "^8.0.6"
-    babel-plugin-ember-modules-api-polyfill "^3.5.0"
-    babel-plugin-htmlbars-inline-precompile "^5.2.1"
-    babel-plugin-syntax-dynamic-import "^6.18.0"
-    broccoli-debug "^0.6.4"
-    broccoli-funnel "^3.0.8"
-    broccoli-merge-trees "^4.2.0"
-    broccoli-plugin "^4.0.0"
-    broccoli-source "^3.0.0"
-    css-loader "^5.2.0"
-    debug "^4.3.1"
-    ember-cli-babel "^7.0.0"
-    fs-extra "^6.0.1"
-    fs-tree-diff "^2.0.0"
-    handlebars "^4.3.1"
-    js-string-escape "^1.0.1"
-    lodash "^4.17.19"
-    mkdirp "^0.5.1"
-    parse5 "^6.0.1"
-    resolve "^1.20.0"
-    resolve-package-path "^3.1.0"
-    rimraf "^2.6.2"
-    semver "^7.3.4"
-    style-loader "^2.0.0"
-    typescript-memoize "^1.0.0-alpha.3"
-    walk-sync "^0.3.3"
-
-ember-auto-import@^2.2.3:
+ember-auto-import@^2.2.0, ember-auto-import@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.2.3.tgz#63aa7e81322018f309518d816756fe0c63053fa2"
   integrity sha512-ISb8HcfLj7f/S3exLNSpmsTXFtu/8X7AVvikYU8/9/5NEobgEaH831jc8fqgQQLNCk8Aiz14u8Xi8SSaBMI88Q==
@@ -7636,14 +7598,6 @@ ember-moment@^8.0.2:
     ember-getowner-polyfill "^2.2.0"
     ember-macro-helpers "^4.2.2"
 
-ember-one-way-select@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/ember-one-way-select/-/ember-one-way-select-4.0.1.tgz#f16c614b5b23fa4677686ed762a3839e5ee3adf2"
-  integrity sha512-B1Li794T1lmg7/d+PSQMnfPTCnDA+FBYD+UOpdIZ9oqMrX0NtQLeERzNVqOR7MbsDAvMkvQFV3YSIVQOuKJjhg==
-  dependencies:
-    ember-cli-babel "^7.22.1"
-    ember-cli-htmlbars "^5.3.1"
-
 ember-parachute@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/ember-parachute/-/ember-parachute-1.0.2.tgz#f147f6b29df100d467acc1ddf13761aef92e95de"
@@ -7920,27 +7874,14 @@ ember-uikit@^4.0.0:
     ember-toggle "^7.1.1"
     uikit "^3.6.21"
 
-ember-validated-form@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/ember-validated-form/-/ember-validated-form-3.0.3.tgz#3410d850c5a685811a64a17d54c7d35b3620f257"
-  integrity sha512-9btwFCneQOzxfTlCv+lQSl2pEOzV4OpLjYiYeM6/3o35BNCdquL+yhFAq/jMRNEtDwS9S7Uft5WIbNpVkqN7FQ==
-  dependencies:
-    ember-auto-import "^1.11.2"
-    ember-cli-babel "^7.26.3"
-    ember-cli-htmlbars "^5.7.1"
-    ember-one-way-select "^4.0.1"
-    ember-truth-helpers "^3.0.0"
-    uuid "^8.3.2"
-
-ember-validated-form@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/ember-validated-form/-/ember-validated-form-5.0.0.tgz#fadb0d07b20e76ceca55265f8d7e2a061c9d329d"
-  integrity sha512-4W83aZhVAKDNnLFpZ7Iu94socgrDXT/smqsuU7IgwjqM4lbWTPxyQSDQmHfi0odD/kGAqDeWjw/m6OEqbSEFAA==
+ember-validated-form@^5.0.0, ember-validated-form@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/ember-validated-form/-/ember-validated-form-5.1.1.tgz#0615d0739dd014435d0b125a292d2ab9a53865b9"
+  integrity sha512-c0psGUBXCsZ/tTcXtYe20koqvj6LiO5Uq4DXDsrn/K6arx88SryFlew+flHS0DTkqn+80XaPBmy/H+KyuuYAAQ==
   dependencies:
     ember-auto-import "^2.2.0"
     ember-cli-babel "^7.26.6"
     ember-cli-htmlbars "^5.7.1"
-    ember-one-way-select "^4.0.1"
     ember-truth-helpers "^3.0.0"
 
 ember-validators@~4.0.0:
@@ -15063,7 +15004,7 @@ uuid@^3.1.0, uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0, uuid@^8.3.1, uuid@^8.3.2:
+uuid@^8.3.0, uuid@^8.3.1:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
