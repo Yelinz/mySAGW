@@ -15,5 +15,5 @@ pyexcel==0.6.7
 pyexcel-xlsx==0.6.0
 pypdf2==1.26.0
 requests==2.26.0
-reportlab==3.6.2
+reportlab==3.6.7
 uwsgi==2.0.20
