@@ -9,7 +9,7 @@ import {
   dropTask,
 } from "ember-concurrency";
 import { saveAs } from "file-saver";
-import moment from "moment";
+import { DateTime } from "luxon";
 
 export default class IdentitiesIndexController extends Controller {
   @service notification;
@@ -121,7 +121,7 @@ export default class IdentitiesIndexController extends Controller {
 
       const blob = yield response.blob();
       const filename = `${this.intl.t("identities.index.export.filename", {
-        date: moment().format("YYYY-MM-DD"),
+        date: DateTime.now().toFormat("yyyy-LL-dd"),
       })}.${fileExtension}`;
 
       saveAs(blob, filename);
