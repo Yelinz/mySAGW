@@ -8,7 +8,7 @@ import {
   dropTask,
   restartableTask,
   lastValue,
-} from "ember-concurrency-decorators";
+} from "ember-concurrency";
 import UIkit from "uikit";
 
 import applyError from "mysagw/utils/apply-error";

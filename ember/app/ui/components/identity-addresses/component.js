@@ -8,7 +8,7 @@ import {
   dropTask,
   restartableTask,
   lastValue,
-} from "ember-concurrency-decorators";
+} from "ember-concurrency";
 import fetch from "fetch";
 import UIkit from "uikit";
 
