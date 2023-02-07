@@ -3,9 +3,9 @@ import { LocalizedModel } from "ember-localized-model";
 import { DateTime } from "luxon";
 
 export default class MembershipModel extends LocalizedModel {
-  @belongsTo("identity") identity;
-  @belongsTo("identity") organisation;
-  @belongsTo("membership-role") role;
+  @belongsTo("identity", {async: true, inverse: "memberships"}) identity;
+  @belongsTo("identity", {async: true, inverse: "members"}) organisation;
+  @belongsTo("membership-role", {async: true, inverse: "memberships"}) role;
   @attr authorized;
   @attr timeSlot;
   @attr nextElection;

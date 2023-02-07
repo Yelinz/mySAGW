@@ -36,6 +36,7 @@ module("Acceptance | snippets", function (hooks) {
     await fillIn("input[name=title]", "Lorem ipsum");
     await click("button[type=submit]");
 
+    await this.pauseTest()
     assert.dom("[data-test-snippet-list] li").exists({ count: 2 });
   });
 

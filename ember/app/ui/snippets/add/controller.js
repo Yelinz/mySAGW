@@ -4,8 +4,11 @@ import { Changeset } from "ember-changeset";
 import lookupValidator from "ember-changeset-validations";
 
 import SnippetValidations from "mysagw/validations/snippet";
+import { inject as service } from "@ember/service";
 
 export default class SnippetsAddController extends Controller {
+  @service router
+
   get changeset() {
     return Changeset(
       this.model,
@@ -16,6 +19,6 @@ export default class SnippetsAddController extends Controller {
 
   @action
   onSave() {
-    this.transitionToRoute("snippets");
+    this.router.transitionTo("snippets");
   }
 }
