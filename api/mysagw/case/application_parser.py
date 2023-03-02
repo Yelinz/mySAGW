@@ -1,6 +1,7 @@
 from django.utils.html import strip_tags
 from django.utils.translation import get_language
 
+from mysagw.utils import format_currency
 from mysagw.pdf_utils import SUPPORTED_MERGE_CONTENT_TYPES
 
 
@@ -153,6 +154,16 @@ class ApplicationParser:
             "info_text": strip_tags(question["infoText"]) or None,
         }
 
+    def _handle_waehrung(self, question, answer):
+        value = answer["node"][self.value_key_for_question(question["__typename"])]
+
+        return {
+            "label": question["label"],
+            "type": question["__typename"],
+            "value": format_currency(value, question.meta.waehrung) if answer else None,
+            "info_text": strip_tags(question["infoText"]) or None,
+        }
+
     def _handle_simple(self, question, answer):
         return {
             "label": question["label"],
@@ -221,6 +232,9 @@ class ApplicationParser:
                 answer = self._get_answer(question, answers)
 
                 args.append(answer)
+
+            if question["meta"].get("waehrung"):
+                type_method = self._handle_waehrung
 
             # now let the type method to its thing
             parsed_data["questions"][question["slug"]] = type_method(*args)

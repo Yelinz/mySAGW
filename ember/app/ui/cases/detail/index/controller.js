@@ -87,10 +87,7 @@ export default class CasesDetailIndexController extends Controller {
               ) &&
               answer.node[`${answer.node.__typename}Value`]
             ) {
-              filteredAnswers.push({
-                label: answer.node.question.label,
-                value: answer.node[`${answer.node.__typename}Value`],
-              });
+              filteredAnswers.push(this.formatAnswer(answer));
             }
           });
 
@@ -111,10 +108,7 @@ export default class CasesDetailIndexController extends Controller {
                   ) &&
                   answer.node[`${answer.node.__typename}Value`]
                 ) {
-                  filteredAnswers.push({
-                    label: answer.node.question.label,
-                    value: answer.node[`${answer.node.__typename}Value`],
-                  });
+                  filteredAnswers.push(this.formatAnswer(answer));
                 }
               }
             );
@@ -127,6 +121,24 @@ export default class CasesDetailIndexController extends Controller {
     );
 
     return [...(newestAnswer ?? []), ...alwaysDisplayedAnswers].flat();
+  }
+
+  formatAnswer(answer) {
+    let value = answer.node[`${answer.node.__typename}Value`];
+
+    if (answer.node.question.meta.waehrung) {
+      value = new Intl.NumberFormat("de-CH", {
+        style: "currency",
+        currency: answer.node.question.meta.waehrung,
+      })
+        .format(value)
+        .replace(".00", ".-");
+    }
+
+    return {
+      label: answer.node.question.label,
+      value,
+    };
   }
 
   @dropTask
