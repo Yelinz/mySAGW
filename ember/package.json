@@ -40,7 +40,7 @@
     "ember-can": "^4.2.0",
     "ember-changeset": "^4.1.2",
     "ember-changeset-validations": "^4.1.1",
-    "ember-cli-clipboard": "^1.1.0",
+    "ember-cli-clipboard": "^1.2.0",
     "ember-cli-htmlbars": "^6.2.0",
     "ember-cli-sass": "^11.0.1",
     "ember-cli-showdown": "^9.0.1",
